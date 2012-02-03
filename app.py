@@ -116,6 +116,10 @@ def construct_random(prefix, middle, suffix):
     for c in template:
         #TODO: get synonyms?
         word_list = list(name_sets[c])
+        
+        if not word_list:
+            continue
+
         word = choice(word_list)
 
         while word in used_words:
